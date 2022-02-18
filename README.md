@@ -28,7 +28,7 @@ Let us start by computing the skeleton of a binary image (image is provided with
     skel = bwmorph(skel, 'shrink');
     figure; imshow(skel==0)
 
-![Skeleton of a binary image](https://github.com/polynomialCurves/blob/master/demos/images/circles_skeleton.png)
+![Skeleton of a binary image](https://github.com/mattools/polynomialCurves/blob/main/demos/circles_skeleton.png)
 
 From the skeleton image, it is possible to compute a series of polynomial curves.
 The result is given as a cell array, each cell containing the data for a single curve.
@@ -45,5 +45,5 @@ The result is given as a cell array, each cell containing the data for a single 
         set(hc, 'linewidth', 2, 'color', 'g');
     end
 
-![Overlay of skeleton curves over original image](https://github.com/polynomialCurves/blob/master/demos/images/circles_skeletonCurves.png)
+![Overlay of skeleton curves over original image](https://github.com/mattools/polynomialCurves/blob/main/demos/circles_skeletonCurves.png)
 
