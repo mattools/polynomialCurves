@@ -23,6 +23,8 @@ skel = bwmorph(img, 'skel', 'Inf');
 skel = bwmorph(skel, 'shrink');
 figure; imshow(skel==0)
 
+print(gcf, 'circles_skeleton.png', '-dpng');
+
 
 %% Compute curve coeffs
 
@@ -38,6 +40,8 @@ for i = 1:length(coeffs)
     set(hc, 'linewidth', 2, 'color', 'g');
 end
 
+print(gcf, 'circles_skeletonCurves.png', '-dpng');
+
 
 %% Display only curves
 
@@ -49,4 +53,3 @@ for i = 1:length(coeffs)
     hc = drawPolynomialCurve([0 1], coeffs{i});
     set(hc, 'linewidth', 2, 'color', 'b');
 end
-
